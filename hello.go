@@ -12,6 +12,7 @@ func main() {
 	multipleReturns()
 	variablesDeclaredInBlock()
 	constants()
+	forLoop()
 }
 
 func basics() {
@@ -56,4 +57,13 @@ func constants() {
 	const lie = false
 
 	fmt.Println(truth, lie)
+}
+
+func forLoop() {
+	var sum int
+	for i := 0; i < 3; i++ {
+		sum += i
+		fmt.Printf("for loop - number is %d\n", i)
+	}
+	fmt.Printf("for loop - sum is %d\n", sum)
 }
