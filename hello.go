@@ -16,6 +16,7 @@ func main() {
 	forIsWhile()
 	foreverLoop()
 	ifWithShortStatement()
+	switchStatement()
 }
 
 func basics() {
@@ -94,4 +95,18 @@ func ifWithShortStatement() {
 		fmt.Println("Is resolved inside if")
 	}
 	// fmt.Println("Is resolved outside if? ", resolved)
+}
+
+func switchStatement() {
+	switch os := "osx"; os {
+	case caseCanBeAnyExpression():
+		fmt.Println("switch - first case")
+		fallthrough
+	case "windows":
+		fmt.Println("switch - falls through to lower case")
+	}
+}
+
+func caseCanBeAnyExpression() string {
+	return "osx"
 }
