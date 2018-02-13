@@ -8,20 +8,25 @@ import (
 )
 
 func main() {
+	basics()
+	multipleReturns()
+	variablesDeclaredInBlock()
+	constants()
+}
+
+func basics() {
 	fmt.Printf("hello ziom!\n")
 	fmt.Println("Random number", rand.Intn(200))
 	fmt.Println("Sqrt", math.Sqrt(7))
+}
 
+func multipleReturns() {
 	x, y, sum := add(3, 4)
 	fmt.Printf("Add %d + %d = %f \n", x, y, sum)
 
 	var name, surname string = "Jan", "Kowalski"
 	name, surname = splitName("John Doe")
 	fmt.Printf("Name is %s and surname %s\n", name, surname)
-
-	variablesDeclaredInBlock()
-
-	constances()
 }
 
 func add(x, y int) (int, int, float32) {
@@ -46,7 +51,7 @@ func variablesDeclaredInBlock() {
 	fmt.Println(str, bl, a, b, c)
 }
 
-func constances() {
+func constants() {
 	const truth bool = true
 	const lie = false
 
