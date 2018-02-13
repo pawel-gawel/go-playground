@@ -1,5 +1,5 @@
 #!/bin/sh
 
-alias g=./go
+clear
 go build
 ./hello
