@@ -15,6 +15,7 @@ func main() {
 	forLoop()
 	forIsWhile()
 	foreverLoop()
+	ifWithShortStatement()
 }
 
 func basics() {
@@ -86,4 +87,11 @@ func foreverLoop() {
 		}
 		i++
 	}
+}
+
+func ifWithShortStatement() {
+	if resolved := true; resolved {
+		fmt.Println("Is resolved inside if")
+	}
+	// fmt.Println("Is resolved outside if? ", resolved)
 }
