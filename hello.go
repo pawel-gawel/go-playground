@@ -5,6 +5,7 @@ import (
 	"math"
 	"math/rand"
 	"strings"
+	"time"
 )
 
 func main() {
@@ -17,6 +18,8 @@ func main() {
 	foreverLoop()
 	ifWithShortStatement()
 	switchStatement()
+	noConditionSwitch()
+	deferStatement()
 }
 
 func basics() {
@@ -109,4 +112,23 @@ func switchStatement() {
 
 func caseCanBeAnyExpression() string {
 	return "osx"
+}
+
+func noConditionSwitch() {
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon.")
+	default:
+		fmt.Println("Good evening.")
+	}
+}
+
+func deferStatement() {
+	v := 0
+	defer fmt.Println("world", v)
+	v = 1
+	fmt.Println("hello")
 }
