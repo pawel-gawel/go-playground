@@ -15,7 +15,9 @@ func main() {
 	x, y, sum := add(3, 4)
 	fmt.Printf("Add %d + %d = %f \n", x, y, sum)
 
-	name, surname := splitName("John Doe")
+	var name string
+	var surname string
+	name, surname = splitName("John Doe")
 	fmt.Printf("Name is %s and surname %s\n", name, surname)
 }
 
