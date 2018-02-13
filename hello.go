@@ -14,6 +14,7 @@ func main() {
 	constants()
 	forLoop()
 	forIsWhile()
+	foreverLoop()
 }
 
 func basics() {
@@ -75,4 +76,14 @@ func forIsWhile() {
 		sum += sum
 	}
 	fmt.Printf("for/while loop - sum is %d\n", sum)
+}
+
+func foreverLoop() {
+	i := 0
+	for {
+		if i > 10 {
+			break
+		}
+		i++
+	}
 }
