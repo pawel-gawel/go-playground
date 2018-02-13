@@ -129,6 +129,7 @@ func noConditionSwitch() {
 func deferStatement() {
 	v := 0
 	defer fmt.Println("world", v)
+	defer fmt.Print(" whole ")
 	v = 1
-	fmt.Println("hello")
+	fmt.Print("hello")
 }
