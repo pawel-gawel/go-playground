@@ -13,6 +13,7 @@ func main() {
 	variablesDeclaredInBlock()
 	constants()
 	forLoop()
+	forIsWhile()
 }
 
 func basics() {
@@ -66,4 +67,12 @@ func forLoop() {
 		fmt.Printf("for loop - number is %d\n", i)
 	}
 	fmt.Printf("for loop - sum is %d\n", sum)
+}
+
+func forIsWhile() {
+	sum := 1
+	for sum < 1000 {
+		sum += sum
+	}
+	fmt.Printf("for/while loop - sum is %d\n", sum)
 }
