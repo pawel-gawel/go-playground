@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
-import "math/rand"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func main() {
 	fmt.Printf("hello ziom!\n")
