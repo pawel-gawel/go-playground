@@ -6,8 +6,8 @@ import (
 	"math/rand"
 )
 
-func add(x, y int) float32 {
-	return float32(x + y)
+func add(x, y int) (int, int, float32) {
+	return x, y, float32(x + y)
 }
 
 func main() {
@@ -15,5 +15,6 @@ func main() {
 	fmt.Println("Random number", rand.Intn(200))
 	fmt.Println("Sqrt", math.Sqrt(7))
 
-	fmt.Println("Add x + y = ", add(3, 4))
+	x, y, sum := add(3, 4)
+	fmt.Printf("Add %d + %d = %f \n", x, y, sum)
 }
