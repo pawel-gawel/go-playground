@@ -20,10 +20,11 @@ func main() {
 	switchStatement()
 	noConditionSwitch()
 	deferStatement()
+	Structs()
 }
 
 func basics() {
-	fmt.Printf("hello ziom!\n")
+	fmt.Printf("hello %s!\n", "ziom")
 	fmt.Println("Random number", rand.Intn(200))
 	fmt.Println("Sqrt", math.Sqrt(7))
 }
