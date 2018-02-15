@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Block struct {
 	parent *Block
 	hash   string
@@ -20,21 +22,21 @@ func Structs() {
 }
 
 func newStruct() {
-	var block1 = Block{}
-	println("block1 hash is: ", block1.hash)
+	var block1 = Block{nil, "block1", "data1"}
+	fmt.Println("block1: ", block1)
 
 	var block2 = &Block{hash: "block2"}
-	println("block2 hash is: ", block2.hash)
+	fmt.Println("block2: ", *block2)
 
 	var block3 = &Block{nil, "block3", "block3 data"}
-	println("block3 hash is: ", block3.hash)
+	fmt.Println("block3: ", *block3)
 
 	var block4 = new(Block)
 	block4.hash = "block4"
-	println("block4 hash is: ", block4.hash)
+	fmt.Println("block4: ", block4)
 
 	var factoredBlock1 = structFactory(nil, "factored1", "factored1 data")
-	println("factoredBlock1 is: ", factoredBlock1.hash)
+	fmt.Println("factoredBlock1: ", factoredBlock1)
 }
 
 func structFactory(parent *Block, hash, data string) *Block {
