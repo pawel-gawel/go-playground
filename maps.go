@@ -9,6 +9,7 @@ func Maps() {
 
 	makeMap()
 	mapLiterals()
+	mutatingMaps()
 }
 
 func makeMap() {
@@ -26,4 +27,26 @@ func mapLiterals() {
 	}
 
 	fmt.Println(m)
+}
+
+func mutatingMaps() {
+	m := make(map[string]float32)
+	m["pi"] = 3.14
+	m["e"] = 2.7
+	fmt.Println(m)
+
+	delete(m, "pi")
+	fmt.Println(m)
+
+	e, okE := m["e"]
+	pi, okPi := m["pi"]
+	fmt.Println(e, okE, pi, okPi)
+
+	type Some struct {
+		i int
+	}
+
+	m2 := make(map[string]Some)
+	some, okSome := m2["elo"]
+	fmt.Println(some, okSome)
 }
