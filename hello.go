@@ -24,6 +24,7 @@ func main() {
 	Arrays()
 	Slices()
 	Maps()
+	Functions()
 }
 
 func basics() {
