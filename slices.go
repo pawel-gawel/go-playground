@@ -14,6 +14,7 @@ func Slices() {
 	sliceCapacity()
 	makeSlice()
 	ticTacToe()
+	slaceRange()
 }
 
 func someSlice() {
@@ -74,4 +75,11 @@ func ticTacToe() {
 	s[1][1] = "X"
 	fmt.Println(s)
 
+}
+
+func slaceRange() {
+	var s = []int{1, 2, 3, 4}
+	for i, v := range s {
+		fmt.Println(i, v)
+	}
 }
