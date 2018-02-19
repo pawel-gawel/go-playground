@@ -19,6 +19,7 @@ func Structs() {
 	newStruct()
 	structComposition()
 	structFunctions()
+	dereferencing()
 }
 
 func newStruct() {
@@ -64,4 +65,10 @@ func (b *Block) log() {
 func structFunctions() {
 	block1 := &Block{hash: "block1"}
 	block1.log()
+}
+
+func dereferencing() {
+	block1 := &Block{hash: "block1"}
+	fmt.Println("dereferenced struct field", (*block1).hash)
+	fmt.Println("but you can access its value without deref", block1.hash)
 }
