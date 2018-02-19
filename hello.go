@@ -22,6 +22,7 @@ func main() {
 	deferStatement()
 	Structs()
 	Arrays()
+	Slices()
 }
 
 func basics() {
