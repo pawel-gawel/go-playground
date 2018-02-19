@@ -21,6 +21,7 @@ func main() {
 	noConditionSwitch()
 	deferStatement()
 	Structs()
+	Arrays()
 }
 
 func basics() {
