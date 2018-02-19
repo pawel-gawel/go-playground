@@ -23,6 +23,7 @@ func main() {
 	Structs()
 	Arrays()
 	Slices()
+	Maps()
 }
 
 func basics() {
