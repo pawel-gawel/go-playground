@@ -25,6 +25,7 @@ func main() {
 	Slices()
 	Maps()
 	Functions()
+	Fibonacci()
 }
 
 func basics() {
